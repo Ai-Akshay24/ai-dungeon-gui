@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 18% 9%;
+    --foreground: 42 88% 92%;
+
+    --card: 222 15% 13%;
+    --card-foreground: 42 88% 92%;
+
+    --popover: 222 15% 13%;
+    --popover-foreground: 42 88% 92%;
+
+    --primary: 275 85% 58%;
+    --primary-foreground: 42 88% 92%;
+    --primary-glow: 282 92% 68%;
+
+    --secondary: 42 95% 52%;
+    --secondary-foreground: 220 18% 9%;
+
+    --muted: 222 15% 22%;
+    --muted-foreground: 42 25% 68%;
+
+    --accent: 275 85% 58%;
+    --accent-foreground: 42 88% 92%;
+
+    --destructive: 358 88% 62%;
+    --destructive-foreground: 42 88% 92%;
+
+    --border: 222 15% 20%;
+    --input: 222 15% 20%;
+    --ring: 275 85% 58%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 218 22% 8%;
+    --foreground: 42 88% 92%;
+    --card: 220 20% 12%;
+    --card-foreground: 42 88% 92%;
+    --popover: 220 20% 12%;
+    --popover-foreground: 42 88% 92%;
+    --primary: 278 92% 72%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 285 98% 82%;
+    --secondary: 42 100% 58%;
+    --secondary-foreground: 218 22% 12%;
+    --muted: 220 20% 20%;
+    --muted-foreground: 215 12% 62%;
+    --accent: 178 82% 52%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 358 88% 52%;
+    --destructive-foreground: 42 88% 92%;
+
+    --border: 220 20% 20%;
+    --input: 220 20% 20%;
+    --ring: 278 92% 72%;
+    --sidebar-background: 218 22% 10%;
+    --sidebar-foreground: 42 88% 92%;
+    --sidebar-primary: 278 92% 72%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 20% 18%;
+    --sidebar-accent-foreground: 42 88% 92%;
+    --sidebar-border: 220 20% 20%;
+    --sidebar-ring: 278 92% 72%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  .glass-panel {
+    background: linear-gradient(135deg, hsl(var(--card) / 0.6), hsl(var(--card) / 0.3));
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--border) / 0.5);
+  }
+  
+  .glow-text {
+    text-shadow: 0 0 20px hsl(var(--primary) / 0.5);
+  }
+}
